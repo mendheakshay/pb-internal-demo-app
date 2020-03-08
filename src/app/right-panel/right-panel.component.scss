@@ -1,0 +1,25 @@
+.project-description-section {
+  border-right: 1px solid #B3B6C2;
+  color: #414658;
+  margin-right: 30px;
+  padding-right: 30px;
+}
+
+.demo-link-section {
+  margin-top: 20px;
+
+  &.demo-link-section-inner {
+    padding-top: 20px;
+    border-top: 1px solid #B3B6C2;
+
+    h2 {
+      color: #B70077;
+    }
+
+    p {
+      a {
+        color: #3e53a4;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<!-- Normal list style -->
+<div>
+  <ul role="menubar">
+    <li *ngFor="let link of jsonData; let i = index;">
+      <a>{{link.header}}</a>
+      <ul *ngIf="link.subheader" role="menu" class="inner-list">
+        <li *ngFor="let link of link.subheader">
+          <a [attr.href]="link.routerlink" [innerHTML]="link.subTitle" class="inner-links">
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+<!-- Accordion Style -->
+
+<!-- <ngb-accordion #acc="ngbAccordion" *ngFor="let option of jsonData">
+  <ngb-panel *ngIf="option.header" title="{{option.header}}">
+    <ng-template ngbPanelContent *ngIf="option.subheader">
+      <ul role="menu" class="inner-list">
+        <li *ngFor="let link of option.subheader">
+          <a [attr.href]="link.routerlink" [innerHTML]="link.subTitle" class="inner-links">
+          </a>
+        </li>
+      </ul>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion> -->
